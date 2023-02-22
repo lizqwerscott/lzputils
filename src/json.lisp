@@ -10,6 +10,7 @@
    :parse
    :to-json-a
    :load-json-file
+   :save-json-file
 
    :bits-to-json
    ))

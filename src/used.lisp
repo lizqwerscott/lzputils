@@ -14,6 +14,7 @@
    :if-return
    :last1
    :append1
+   :symbol-to-lower-string
    ))
 (in-package :lzputils.used)
 
@@ -54,5 +55,8 @@
 (defun append1 (lst item)
   (append lst
           (list item)))
+
+(defun symbol-to-lower-string (s)
+  (format nil "~(~A~)" s))
 
 (in-package :cl-user)
