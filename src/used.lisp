@@ -15,6 +15,8 @@
    :last1
    :append1
    :symbol-to-lower-string
+
+   :hash-print
    ))
 (in-package :lzputils.used)
 
@@ -58,5 +60,10 @@
 
 (defun symbol-to-lower-string (s)
   (format nil "~(~A~)" s))
+
+(defun hash-print (hash-table)
+  (maphash #'(lambda (k v)
+               (format t "~A: ~A~%" k v))
+           hash-table))
 
 (in-package :cl-user)
